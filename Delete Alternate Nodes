@@ -1,0 +1,11 @@
+class Solution {
+    
+    public void deleteAlternate (Node head){
+        Node p = head;
+        while(p!=null && p.next!=null)
+        {
+            p.next = p.next.next;
+            p=p.next;
+        }
+    }
+}
