@@ -1,0 +1,15 @@
+class Solution
+{
+    public static int count(Node head, int search_for)
+    {
+        Node p = head;
+        int c = 0;
+        while(p!=null)
+        {
+            if(p.data == search_for)
+            c++;
+            p = p.next;
+        }
+        return c;
+    }
+}
