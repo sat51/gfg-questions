@@ -1,0 +1,30 @@
+class GFG
+{
+    ArrayList<Long> find(long arr[], int n, int x)
+    {
+        // code here
+        ArrayList<Long> list = new ArrayList<>();
+        long firstoccur = -1;
+        long lastoccur = -1;
+        for(int i = 0;i<n;i++)
+        {
+            if(arr[i]==x)
+            {
+                firstoccur = i;
+                break;
+            }
+        }
+        for(int i=n-1;i>=0;i--)
+        {
+            if(arr[i]==x)
+            {
+                lastoccur = i;
+                break;
+            }
+        }
+        list.add(firstoccur);
+        list.add(lastoccur);
+        return list;
+    }
+ //   return -1;
+}
