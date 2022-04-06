@@ -1,0 +1,22 @@
+class Solution{
+    //Function to rotate a linked list.
+    public Node rotate(Node head, int k) {
+        
+            Node temp= head;
+            while(temp.next!= null)
+            {
+                temp = temp.next;
+            }
+            for(int i=1 ; i<=k;i++)
+            {
+                int n = head.data;
+                Node ne = new Node(n);
+                head = head.next;
+                temp.next = ne;
+                temp = temp.next;
+            }
+            return head;
+            
+        // add code here
+    }
+}
