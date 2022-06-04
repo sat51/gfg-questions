@@ -1,0 +1,38 @@
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
+
+
+
+public class Solution {
+    public static void main(String[] args) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+
+        String n = bufferedReader.readLine();
+        int i = Integer.parseInt(n);
+        int  m=i/2; 
+        int flag = 0;     
+  if(i==0||i==1){  
+   System.out.println("not prime");      
+  }else{  
+   for(int j=2;j<=m;j++){      
+    if(i%j==0){      
+     System.out.println("not prime");      
+     flag=1;      
+     break;      
+    }      
+   }      
+   if(flag==0)  { System.out.println("prime"); }  
+  }//end of else  
+
+        bufferedReader.close();
+    }
+}
